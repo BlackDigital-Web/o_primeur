@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 390px;
+    
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.header__account {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+}
+
+.nav__ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: chocolate;
+    text-decoration: none;
+}
+
+.account{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.footer__ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
