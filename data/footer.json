@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Mentions légales",
+        "href": "http://127.0.0.1/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+    },
+    {
+        "title": "A propos",
+        "href": "http://127.0.0.1/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+    },
+    {
+        "title": "Nous contacter",
+        "href": "mailto:wh.claire31@gmail.com"
+    }
+]

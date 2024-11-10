@@ -1,0 +1,17 @@
+[
+    {
+        "title":"Panier",
+        "img": "/images/icones/icons8-cart-24.png",
+        "alt": "icones panier",
+        "href": "http://127.0.0.1/"
+    },
+
+    {
+        "title":"Mon compte",
+        "img":"/images/icones/icons8-user-24.png",
+        "alt":"icone compte",
+        "href": "http://127.0.0.1/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+    }
+]

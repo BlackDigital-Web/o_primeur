@@ -11,18 +11,28 @@
     <div class="container">
         <header class="header">
             <div class="header__account">
-                <h1>Ô PRIMEUR</h1>
+                <h1 class="header__title">Ô PRIMEUR</h1>
                     <div class="account">
-                        <p>Panier</p>
-                        <p>Mon compte</p>
+                        <% for (let i=0; i < account.length; i++) {%>
+                        <ul>
+                            <li class="account__link">
+                                <a class="account__link" href="<%=account[i].href %>" target="<%=account[i].target %>" rel="<%=account[i].rel %>"><%=account[i].title %></a>
+                                <img class="icone" src="<%= account[i].img %>" alt="<%= account[i].alt %>">
+                            </li>
+                        </ul>
+                        <% } %>
                     </div>
+                    <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+        
             </div>
             <nav class="header__nav">
                 <ul class="nav__ul">
-                    <li><a href="/">Acceuil</a></li>
-                    <% if  %>
-                    <li><a href="/categorie/fruits">Fruits</a></li>
-                    <li><a href="/categorie/légumes">Légumes</a></li>
+                    <li><a class="nav__link" href="/">Acceuil</a></li>
+                    <% if (typeof foundName === 'undefined' && pages !== 'undefined' ) { %>
+                        <% for (let i=0; i < pages.length; i++) {%>
+                        <li><a class="nav__link" href="/categorie/<%=pages[i]%>"><%=pages[i]%></a></li>
+                        <% } %>
+                    <% } %>
                 </ul>
             </nav>
         </header>

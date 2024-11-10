@@ -1,5 +1,6 @@
 import { Router } from 'express';
-import {appController} from './controllers/appController.js'
+import {appController} from './controllers/appController.js';
+import pages from '../data/pages.json' assert { type: 'json'};
 
 const router = Router();
 
@@ -7,20 +8,19 @@ router.get('/', appController.index);
 
 router.get('/categorie/:name', (req, res) =>{
     const nameUrl = req.params.name;
-    const category = [
-        'fruits',
-        'legumes',
-    ]
-    const foundName = category.find(name =>
+    const index = 'index';
+    const foundName = pages.find(name =>
         name.toLowerCase() === nameUrl.toLowerCase()
-        )
-
-    if(foundName === 'fruits'){
-        res.render('fruits');
+        );
+        
+    if(foundName){
+        console.log(foundName)
+        console.log(pages.length);
+        
+        res.render(foundName, pages.index);
     }else {
-        res.render('legumes');
+        res.status(404).send('error404')
     }
 })
-    
 
 export {router};
